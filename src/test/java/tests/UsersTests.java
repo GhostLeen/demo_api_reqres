@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -18,6 +19,7 @@ public class UsersTests {
     @Test
     @Owner("a.denyushina")
     @DisplayName("Get user data by id")
+    @Description("GET /api/users/{id}")
     void getUserByIdTest() {
 
         UserResponseData responseData = given()
@@ -39,6 +41,7 @@ public class UsersTests {
     @Test
     @Owner("a.denyushina")
     @DisplayName("Delete user by id")
+    @Description("DELETE /api/users/{id}")
     void deleteUserByIdTest() {
 
         given()

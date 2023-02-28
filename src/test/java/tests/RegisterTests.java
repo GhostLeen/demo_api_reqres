@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -20,6 +21,7 @@ public class RegisterTests {
     @Test
     @Owner("a.denyushina")
     @DisplayName("Successful registration of default user")
+    @Description("POST /api/register")
     void successRegisterTest() {
 
         UserGenerator user = UserGenerator.builder()
@@ -40,6 +42,7 @@ public class RegisterTests {
     @Test
     @Owner("a.denyushina")
     @DisplayName("Unsuccessful registration of unsupported user")
+    @Description("POST /api/register")
     void unSuccessRegisterUnsupportedUserTest() {
 
         UserGenerator user = UserGenerator.builder()
@@ -60,6 +63,7 @@ public class RegisterTests {
     @Test
     @Owner("a.denyushina")
     @DisplayName("Unsuccessful registration with no passed values")
+    @Description("POST /api/register")
     void unSuccessRegisterTest() {
 
         given()

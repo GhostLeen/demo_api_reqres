@@ -1,5 +1,6 @@
 package tests;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
@@ -19,6 +20,7 @@ public class LoginTests {
     @Test
     @Owner("a.denyushina")
     @DisplayName("Successful login")
+    @Description("POST /api/login")
     void successLoginTest() {
 
         UserGenerator user = UserGenerator.builder()
@@ -39,6 +41,7 @@ public class LoginTests {
     @Test
     @Owner("a.denyushina")
     @DisplayName("Unsuccessful login with incorrect user data")
+    @Description("POST /api/login")
     void unSuccessLoginTest() {
 
         UserGenerator user = UserGenerator.builder()
